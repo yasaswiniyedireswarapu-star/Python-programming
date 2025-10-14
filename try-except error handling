@@ -1,0 +1,14 @@
+# Write a Python program that demonstrates error handling using the try-except block to handle division by zero
+try:
+    numerator = int(input("Enter numerator: "))
+    denominator = int(input("Enter denominator: "))
+    result = numerator / denominator
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+except ValueError:
+    print("Error: Please enter valid integers.")
+OUTPUT:
+Enter numerator: 3
+Enter denominator: 4
+Result: 0.75
