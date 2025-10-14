@@ -1,0 +1,8 @@
+
+text = input("Enter a string: ") # Split
+# into list of characters
+chars = list(text)
+print("Array of characters:", chars)
+OUTPUT:
+Enter a string: yashu
+Array of characters: ['y', 'a', 's', 'h', 'u']
