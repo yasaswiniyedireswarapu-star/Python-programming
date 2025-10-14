@@ -1,0 +1,45 @@
+ # Write a NumPy program using NumPy methods- max, min, argmax, argmin, argmax, repr,
+ # count, bincount, unique. a. To extract all numbers from a given array which are less and greater than a
+ # specified number. b. To find the indices of the maximum and minimum numbers along the given axis
+ # of an array
+
+import numpy as np # Creating a sample array
+arr = np.array([5, 2, 9, 7, 2, 8, 1, 9, 4])
+print("Original Array:", arr)
+# a) Extract numbers less and greater than a specified number
+num=5
+less_than_num= arr[arr < num]
+greater_than_num = arr[arr > num]
+print("\nNumbers less than", num, ":", less_than_num)
+print("Numbers greater than", num, ":", greater_than_num)
+# b) Find indices of maximum and minimumnumbers
+print("\nIndex of maximum number:", np.argmax(arr))
+print("Index of minimum number:", np.argmin(arr))
+# Maximumandminimumvalues
+print("Maximum value:", np.max(arr))
+print("Minimum value:", np.min(arr))
+# Representation of the array
+print("\nArray representation:", np.array_repr(arr))
+# Count occurrences of a specific number
+value_to_count = 2
+print(f"Count of {value_to_count} in array:", np.count_nonzero(arr == value_to_count))
+# Bincount (for non-negative integers)
+print("Bincount of array:", np.bincount(arr))
+# Unique elements
+unique_elements = np.unique(arr)
+print("Unique elements in array:", unique_elements)
+OUTPUT:
+Original Array: [5 2 9 7 2 8 1 9 4]
+
+Numbers less than 5 : [2 2 1 4]
+Numbers greater than 5 : [9 7 8 9]
+
+Index of maximum number: 2
+Index of minimum number: 6
+Maximum value: 9
+Minimum value: 1
+
+Array representation: array([5, 2, 9, 7, 2, 8, 1, 9, 4])
+Count of 2 in array: 2
+Bincount of array: [0 1 2 0 1 1 0 1 1 2]
+Unique elements in array: [1 2 4 5 7 8 9]
