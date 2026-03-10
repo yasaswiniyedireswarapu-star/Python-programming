@@ -1,0 +1,11 @@
+# Read the number of test cases
+T = int(input())
+
+for _ in range(T):
+    # X: Total money, Y: Cost per chocolate
+    X, Y = map(int, input().split())
+    
+    # Calculate how many full chocolates can be bought
+    ans = X // Y
+    
+    print(ans)
