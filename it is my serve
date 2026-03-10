@@ -1,0 +1,15 @@
+# Read the number of test cases
+T = int(input())
+
+for _ in range(T):
+    # P: Alice's score, Q: Bob's score
+    P, Q = map(int, input().split())
+    
+    total_points = P + Q
+    
+    # Every 4 points, the cycle (Alice-Alice-Bob-Bob) repeats.
+    # We check the position within that 4-point cycle.
+    if (total_points % 4) < 2:
+        print("Alice")
+    else:
+        print("Bob")
