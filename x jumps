@@ -1,0 +1,15 @@
+import math
+
+# Read number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read N, K, M
+    N, K, M = map(int, input().split())
+    
+    # Capacity of one bag
+    bag_capacity = K * M
+    
+    # Calculate bags needed using ceiling division
+    ans = math.ceil(N / bag_capacity)
+    print(ans)
