@@ -1,0 +1,13 @@
+# Read the number of test cases
+T = int(input())
+
+for _ in range(T):
+    # Read all four coordinates as a list of integers
+    x1, y1, x2, y2 = map(int, input().split())
+    
+    # Calculate the absolute difference for both axes
+    diff_x = abs(x1 - x2)
+    diff_y = abs(y1 - y2)
+    
+    # The chessboard distance is the maximum of these two
+    print(max(diff_x, diff_y))
